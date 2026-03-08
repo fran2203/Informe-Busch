@@ -1,0 +1,48 @@
+El experimento comenzó con la calibración del campo magnético $\mathbf{B}.$ Para esto se hizo uso de 5 bobinas, $A_1,\, A_2,\, A_3,\, B_1,\, B_2$,
+, cada una con un reóstato en serie. Dichas bobinas se encargan de generar el campo magnético $\mathbf{B}$ dentro del cilindro donde irá el tubo de rayos catódicos. Cabe recalcar que dicho cilindro se encuentra inclinado de forma tal
+que su eje es paralelo a la dirección del campo magnético terrestre, de modo que el campo generado por las bobinas se suma directamente con el terrestre.
+
+Se hizo uso de un multímetro Fluke179 True RMS para medir la corriente total $I$ del circuito y una fuente GW Instek PSH-3020A
+para suministrar corriente al circuito, como se observa en la Figura \ref{fig:arreglo}. Para la medición del campo magnético se hizo uso de un gaussímetro LakeShore 425 con una sonda Hall axial.
+
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}[scale=.9]
+        % Paths, nodes and wires:
+        \draw (5, 5) to[american inductor, l={$A_1$}] (5, 3);
+        \draw (6, 5) to[american inductor, l={$A_2$}] (6, 3);
+        \draw (7, 5) to[american inductor, l={$A_3$}] (7, 3);
+        \draw (8, 5) to[american inductor, l={$B_1$}] (8, 3);
+        \draw (9, 5) to[american inductor, l={$B_2$}] (9, 3);
+        \draw (5, 3) to[variable american resistor] (5, 1);
+        \draw (6, 3) to[variable american resistor] (6, 1);
+        \draw (7, 3) to[variable american resistor] (7, 1);
+        \draw (8, 3) to[variable american resistor] (8, 1);
+        \draw (9, 3) to[variable american resistor] (9, 1);
+        \node[shape=rectangle, minimum width=0.465cm, minimum height=0.465cm](N1) at (6.5, 3){} node[anchor=center] at (N1.text){$R_{A2}$};
+        \node[shape=rectangle, minimum width=0.465cm, minimum height=0.465cm](N2) at (7.5, 3){} node[anchor=center] at (N2.text){$R_{A3}$};
+        \node[shape=rectangle, minimum width=0.465cm, minimum height=0.465cm](N3) at (5.5, 3){} node[anchor=center] at (N3.text){$R_{A1}$};
+        \node[shape=rectangle, minimum width=0.465cm, minimum height=0.465cm](N4) at (8.5, 3){} node[anchor=center] at (N4.text){$R_{B1}$};
+        \node[shape=rectangle, minimum width=0.465cm, minimum height=0.465cm](N5) at (9.5, 3){} node[anchor=center] at (N5.text){$R_{B2}$};
+        \draw (2, 1) to[ammeter] (4, 1);
+        \draw (4, 1) -- (9, 1);
+        \draw (2, 2.25) to[american current source] (2, 3.75);
+        \draw (2, 1) -- (2, 2.25);
+        \draw (2, 3.75) -| (2, 5) -- (5, 5);
+        \draw (5, 5) -- (9, 5);
+        \node[shape=rectangle, minimum width=1.965cm, minimum height=1.465cm] at (3, 4.25){} node[anchor=center, align=center, text width=2cm, inner sep=6pt] at (3.35, 3.25){GW Instek PSH-3020A};
+    \end{tikzpicture}
+    \caption{Arreglo experimental para la calibración del campo magnético $\mathbf{B}$.}
+    \label{fig:arreglo}
+\end{figure}
+
+La calibración consistió en medir el campo $B$ en distintas posiciones dentro del tubo,
+ con la ayuda de una vara de madera con el sensor Hall ubicado sobre su punta. 
+ Dicha vara era introducida dentro del tubo a distintas profundidades y en cada posición
+ se registraban los valores de $B$ e $I,$ luego se variaban los valores de los reóstatos a
+ modo de minimizar la variación de $B$ a lo largo del tubo. Una vez obtenido un campo uniforme,
+  se procedió a medir el valor del campo $B$ en distintas posiciones del cilindro para
+  distintos valores de corriente $I,$ a modo de establecer una relación entra la corriente total $I$
+  del circuito y el campo $B.$ Para ver los datalles del proceso ver el Anexo A.
+
+Una vez terminada dicha calibración se procedió a ubicar el tubo de rayos catódicos en la zona de menor variación de campo $B$
