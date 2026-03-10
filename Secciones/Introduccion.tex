@@ -1,0 +1,48 @@
+En el año 1922, Hans Busch presenta teóricamente que cualquier campo magnético o eléctrico de simetría axial es capaz de enfocar un haz de electrones de forma análoga a la que una lente actúa sobre un haz de luz. Tal aporte da inicio así a la óptica electrónica y fue crucial para la invención del microscopio electrónico en 1931. Posteriormente, en el año 1926, y con bases en su aporte teórico previo, Busch propone y detalla un método preciso para la determinación de la relación carga-masa del electrón (e/m). 
+
+En el método de Busch se aceleran electrones en un tubo de rayos catódicos y se los somete posteriormente al efecto de un campo magnético colineal con el eje del tubo. Se puede considerar que la fuente de origen de los electrones es puntual y se supone homogeneidad del campo magnético en todo el trayecto de aquellos. A su vez, la diferencia de potencial \textit{V} con la cual se acelera a los electrones se supone lo suficientemente alta para que las componentes de sus velocidades satisfagan que $
+|\mathbf{v_\parallel}| \gg |\mathbf{v_\perp}|$ (respecto a la dirección del campo magnético). Tomando la fuerza de Lorentz, se tiene:
+
+\begin{equation}
+    \mathbf{F} = e(\mathbf{v_\perp\times\mathbf{B}})\,,
+\end{equation}
+
+\noindent donde \textit{e} es la carga del electrón. Se observa que el campo magnético no hace fuerza sobre la componente paralela de la velocidad, por lo cual puede suponerse que se mantiene constante a lo largo de toda la trayectoria. A su vez, debido a que el haz puede no estar perfectamente colimado, las pequeñas componentes transversales de la velocidad son tales que el electrón produce órbitas helicoidales. Se toma, de este modo, la frecuencia angular del movimiento circular que se describe transversalmente al campo magnético:
+
+\begin{equation}
+    \omega = |\mathbf{v_\perp}|r\,,
+    \label{eq:omega-vperp}
+\end{equation}
+
+\noindent donde \textit{r} es el radio del círculo descrito transversalmente a $\mathbf{B}$. Sea ahora un conjunto de electrones que parten desde un fuente puntual. Dado que se supone al campo magnético con simetría axial, las distintas velocidades transversales son tales que respetan una distribución de probabilidad dependiente de la distancia al eje (\textit{r}). Ahora bien, considerando la dinámica circular que describe la componente perpendicular y tomando la Ecuación \ref{eq:omega-vperp}, puede observarse que,
+
+\begin{equation}
+    \omega = \frac{e}{m}|\mathbf{B}|\,,
+    \label{eq:omega}
+\end{equation}
+
+\noindent con \textit{m} la masa del electrón. Dado que los electrones parten desde la misma fuente puntual y tienen la misma velocidad angular, sin importar la velocidad transversal, todos se focalizan en las misma distancias $l_n = nT|\mathbf{v_\parallel}|$, con $n$ un entero y $T$ el período de las órbitas. Considerando entonces la Ecuación \ref{eq:omega},
+
+\begin{equation}
+    |\mathbf{v_\parallel}| = \frac{l_n}{2n\pi}\frac{e}{m}|\mathbf{B}|\,,
+    \label{eq:vpar}
+\end{equation}
+
+\noindent para lo cual se supone además ausencia de fuerzas repulsivas entre los electrones. La Ecuación \ref{eq:vpar} señala que para una dada distancia a la fuente de electrones y a \textit{V} constante, hay distintos órdenes $n$ para los cuales el haz se focaliza en un punto. 
+
+Finalmente, por conservación de energía para la suposición $|\mathbf{v_\parallel}| \gg |\mathbf{v_\perp}|$, se tiene:
+
+\begin{equation}
+    |\mathbf{v_\parallel}|^2 = 2\frac{e}{m}V\,,
+\end{equation}
+
+\noindent con lo cual, dada la Ecuación \ref{eq:vpar}, se concluye:
+
+\begin{equation}
+    V = \frac{l_n^2}{8n^2\pi^2}\frac{e}{m}|\mathbf{B}|\,.
+    \label{eq:Busch}
+\end{equation}
+
+Luego, para un dado \textit{V} en la fuente de electrones, variar $|\mathbf{B}|$ permite desplazar las distancias $l_n$ en las cuales se enfoca el haz. Siendo así, sobre una pantalla a distancia \textit{D} fija de la fuente, se obtiene una distribución del impacto de electrones que se focaliza en un punto cuando $D = l_n$ (a un \textit{n} dado). Cada focalización, o mínimo de la sección transversal del haz, para variaciones de $|\mathbf{B}|$ a un dado \textit{V} se corresponden a distintos órdenes de $n$. Nótese a su vez que estos mínimos son equidistantes en $|\mathbf{B}|$ entre sí dada la periodicidad de las órbitas. Y es a través de estos mínimos que, dada la Ecuación \ref{eq:Busch}, puede hallarse la relación e/m con la proporcionalidad entre \textit{V} y $|\mathbf{B}|^2$.
+
+De este modo, se tiene por objetivo del presente trabajo recrear el método Busch para la determinación de la relación carga-masa del electrón. Se implementará así un tubo de rayos catódicos como fuente emisora de electrones y una pantalla sobre la cual observar la distribución de sus impactos. Variando diferencias de potencial para la aceleración de electrones y el campo magnético en el cual se hallan inmersos, se estudiarán los mínimos de sección transversal en la distribución de sus impactos sobre la pantalla. Son aquellos los que permitirán, en base a la Ecuación \ref{eq:Busch}, obtener la relación e/m, estudiar su apreciación y comparación con valores tabulados y así extraer conclusiones sobre la recreación del método de Busch que será llevado a cabo.
