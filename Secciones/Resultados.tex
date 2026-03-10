@@ -45,8 +45,8 @@ a modo de encontrar los mínimos relativos de área relativa. Esto se muestra en
     \label{fig:area_vs_V}
 \end{figure}
 
-Se observa una curva similar a la esperada por la Ecuación PONER ECUACION CORRESPONDIENTE, aunque esto no fue así
-para otros valores de tensión de aceleración. El por qué de esto se discutirá más adelante.
+Se observa una curva que comienza con un área máxima de impacto para luego reducirse progresivamente, con unos mínimos relativos entre medio, aunque esto no fue totalmente así
+para otros valores de tensión de aceleración, sino que luego de un mínimo algunas curvan aumentaban mucho su área de impacto. El por qué de esto se discutirá más adelante.
 
 Luego, mediante un script de Python, se encontraron los mínimos
 relativos de área relativa, identificándose además el orden de cada mínimo. Dichos mínimos se muestran en la Figura \ref{fig:minimos}:
@@ -68,7 +68,7 @@ con la teoría. Luego se procedió a normalizar por $n^2$, ya que dicha relació
     \label{fig:minimos_normalizados}
 \end{figure}
 
-A partir de la pendiente del ajuste y la Ecuación ECUACION QUE HAY QUE PONER, se determinó que la relación
+A partir de la pendiente del ajuste y la Ecuación \ref{eq:Busch}, se determinó que la relación
 carga-masa del electrón es $e/m=\left( 6,7 \pm 0,4 \right)\times 10^{11}\,\unit{\coulomb\per\kilogram},$ valor lejano al aceptado de $1,75882000838(55)\times 10^{11}\,\unit{\coulomb\per\kilogram}$\cite{nist_em}.
 
 Como en la Figura \ref{fig:minimos_normalizados} se observa que la pendiente de los valores para el primer orden es mayor (y por lo tanto una menor $e/m$), se
