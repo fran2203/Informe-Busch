@@ -10,7 +10,7 @@ la que será la zona de trabajo del tubo.
 \end{figure}
 
 Una vez readaptado el armado experimental, se procedió a encontrar los mínimos relativos de área de impacto de electrones
-para distintos valores de tensión de aceleración $V.$ Se muestra en la Figura \ref{fig:area_impacto} como la variación de tensión de alimentación (y por tanto de campo magnético)
+para distintos valores de tensión de aceleración $V.$ Se muestra en la Figura \ref{fig:area_impacto} cómo la variación de tensión de alimentación (y por tanto de campo magnético)
 afecta al área relativa de impacto para una misma tensión de aceleración.
 
 \begin{figure}[h]
@@ -35,7 +35,7 @@ afecta al área relativa de impacto para una misma tensión de aceleración.
     \label{fig:area_impacto}
 \end{figure}
 
-Para cada valor de tensión de aceleración, se gráfico el área relativa en función de la tensión de alimentación,
+Para cada valor de tensión de aceleración, se graficó el área relativa en función de la tensión de alimentación,
 a modo de encontrar los mínimos relativos de área relativa. Esto se muestra en la Figura \ref{fig:area_vs_V}.
 
 \begin{figure}[h]
@@ -46,10 +46,10 @@ a modo de encontrar los mínimos relativos de área relativa. Esto se muestra en
 \end{figure}
 
 Se observa una curva que comienza con un área máxima de impacto para luego reducirse progresivamente, con unos mínimos relativos entre medio, aunque esto no fue totalmente así
-para otros valores de tensión de aceleración, sino que luego de un mínimo algunas curvan aumentaban mucho su área de impacto. El por qué de esto se discutirá más adelante.
+para otros valores de tensión de aceleración, sino que luego de un mínimo algunas curvan aumentaban mucho su área de impacto. El porqué de esto se discutirá más adelante.
 
 Luego, mediante un script de Python, se encontraron los mínimos
-relativos de área relativa, identificándose además el orden de cada mínimo. Dichos mínimos se muestran en la Figura \ref{fig:minimos}:
+relativos de área relativa, identificándose además el orden de cada mínimo. Dichos mínimos se muestran en la Figura \ref{fig:minimos}.
 
 \begin{figure}[h]
     \centering
@@ -58,8 +58,8 @@ relativos de área relativa, identificándose además el orden de cada mínimo. 
     \label{fig:minimos}
 \end{figure}
 
-Para cada orden de mínimos, la relación debería ser lineal, pero se observa que solo algunos ordenes cumplen esto, lo que es inconsistente
-con la teoría. Luego se procedió a normalizar por $n^2$, ya que dicha relación debería ser lineal y se realizó un ajuste de dichos datos. Esto se muestra en la Figura \ref{fig:minimos_normalizados}:
+Para cada orden de mínimos, la relación debería ser lineal, pero se observa que sólo algunos ordenes cumplen esto, lo que es inconsistente
+con la teoría. Luego se procedió a normalizar por $n^2$, ya que dicha relación debería ser lineal y se realizó un ajuste de dichos datos. Esto se muestra en la Figura \ref{fig:minimos_normalizados}.
 
 \begin{figure}[h]
     \centering
@@ -69,8 +69,8 @@ con la teoría. Luego se procedió a normalizar por $n^2$, ya que dicha relació
 \end{figure}
 
 A partir de la pendiente del ajuste y la Ecuación \ref{eq:Busch}, se determinó que la relación
-carga-masa del electrón es $e/m=\left( 6,7 \pm 0,4 \right)\times 10^{11}\,\unit{\coulomb\per\kilogram},$ valor lejano al aceptado de $1,75882000838(55)\times 10^{11}\,\unit{\coulomb\per\kilogram}$\cite{nist_em}.
+carga-masa del electrón es $e/m=\left( 6,7 \pm 0,4 \right)\times 10^{11}\,\unit{\coulomb\per\kilogram}.$ El valor aceptado correspondiente resulta: $1,75882000838(55)\times 10^{11}\,\unit{\coulomb\per\kilogram}$\cite{nist_em}, alejado del reportado experimentalmente en, aproximadamente, 12 sigmas, pero con el mismo orden de magnitud.
 
 Como en la Figura \ref{fig:minimos_normalizados} se observa que la pendiente de los valores para el primer orden es mayor (y por lo tanto una menor $e/m$), se
 hizo un ajuste sobre esos datos únicamente para ver si estos eran más consistentes, pero el valor obtenido fue de $e/m=\left( 3,1 \pm 0,2 \right)\times 10^{11}\,\unit{\coulomb\per\kilogram},$ valor todavía
-lejano del aceptado, aunque mejor que el obtenido anteriormente.
+lejano del aceptado, aunque mejor que el obtenido anteriormente (distante en, aproximadamente, 7 sigmas).
